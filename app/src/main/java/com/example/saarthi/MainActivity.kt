@@ -1,13 +1,16 @@
 package com.example.saarthi
 import android.content.Intent
 import android.widget.Button
+import android.speech.tts.TextToSpeech
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+
+    private var tts: TextToSpeech? = null
+    private lateinit var btnBlindNav: Button
+    private lateinit var btnCurrency: Button
+    private lateinit var btnReading: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
