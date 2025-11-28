@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="saarthi_green">#145A21</color>        <!-- primary green -->
+    <color name="saarthi_green_dark">#0F4416</color>   <!-- darker for pressed state -->
+    <color name="text_on_light">#0F2B13</color>        <!-- dark text for contrast -->
+    <color name="light_bg">#ECECEC</color>             <!-- page background (light gray) -->
+</resources>

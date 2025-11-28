@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- App theme (MaterialComponents) -->
+    <style name="Theme.Saarthi" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- white window background -->
+        <item name="android:windowBackground">@android:color/white</item>
+
+        <!-- primary colors (adjust if you want) -->
+        <item name="colorPrimary">#1B5E20</item>
+        <item name="colorPrimaryVariant">#144214</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <!-- statusBar/navBar colors can be added if needed -->
+        <!-- <item name="android:statusBarColor">?attr/colorPrimaryVariant</item> -->
+    </style>
+
+</resources>
