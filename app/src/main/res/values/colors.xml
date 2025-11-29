@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="saarthi_green">#145A21</color>        <!-- primary green -->
-    <color name="saarthi_green_dark">#0F4416</color>   <!-- darker for pressed state -->
-    <color name="text_on_light">#0F2B13</color>        <!-- dark text for contrast -->
-    <color name="light_bg">#ECECEC</color>             <!-- page background (light gray) -->
+    <!-- Gradient / background -->
+    <color name="bg_start">#6A4BD6</color>
+    <color name="bg_end">#4E9BE6</color>
+
+    <!-- Whites & text -->
+    <color name="white">#FFFFFF</color>
+    <color name="title_text">#0B0B0B</color>
+    <color name="subtitle_text">#2B2B2B</color>
+    <color name="text_on_light">#111111</color>
+
+    <!-- Saarthi greens used by button_green.xml -->
+    <color name="saarthi_green">#145A21</color>        <!-- main green -->
+    <color name="saarthi_green_dark">#0F4416</color>   <!-- pressed/darker green -->
+
+    <!-- Button / UI -->
+    <color name="button_border">#FFFFFFFF</color>
+    <color name="assistance_button">#FFFFFF</color>
 </resources>

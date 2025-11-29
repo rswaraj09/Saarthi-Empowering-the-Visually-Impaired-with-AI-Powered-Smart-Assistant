@@ -1,111 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/main_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/gradient_background">
 
-
-    <ImageView
-            android:id="@+id/imageTop"
-            android:layout_width="0dp"
-            android:layout_height="220dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/front"
-            android:contentDescription="Front photo"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-    <ImageView
-        android:id="@+id/imageLogo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/saarthi"
-        android:contentDescription="Saarthi logo"
-        app:layout_constraintTop_toBottomOf="@id/imageTop"
+    <!-- top round decorative dots (optional) -->
+    <View
+        android:id="@+id/dots"
+        android:layout_width="14dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="18dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:translationY="10dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerInside"
-        android:elevation="8dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Circular white holder for logo -->
+    <FrameLayout
+        android:id="@+id/logoHolder"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/logo_circle_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imageLogo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@drawable/saarthi"
+            android:contentDescription="Saarthi Logo"
+            android:scaleType="centerInside"/>
+
+    </FrameLayout>
+
+    <!-- Title -->
     <TextView
         android:id="@+id/textTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="SAARTHI"
-        android:textSize="30sp"
+        android:textSize="34sp"
         android:textStyle="bold"
-        android:textColor="#000000"
+        android:textColor="@color/title_text"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/imageLogo"
+        android:letterSpacing="0.02"
+        app:layout_constraintTop_toBottomOf="@id/logoHolder"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="12dp"/>
 
+    <!-- Subtitle -->
     <TextView
         android:id="@+id/textSubtitle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Empowering the Visually Impaired with AI Powered Smart Assistant"
-        android:textSize="13sp"
-        android:textColor="#000000"
-        android:alpha="0.8"
+        android:text="Empowering the visually impaired with AI Powered Smart Assistance"
+        android:textSize="12sp"
+        android:textColor="@color/subtitle_text"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/textTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="4dp"/>
-
-
-
-    <LinearLayout
-        android:id="@+id/buttonsGroup"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
+        android:layout_marginTop="6dp"
         android:paddingStart="24dp"
-        android:paddingEnd="24dp"
+        android:paddingEnd="24dp"/>
+
+    <!-- Buttons column -->
+    <LinearLayout
+        android:id="@+id/buttonsColumn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/textSubtitle"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="50dp">
+        android:layout_marginTop="28dp"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp">
 
         <Button
             android:id="@+id/btnBlindNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/outlined_button"
             android:text="Blind Navigation"
+            android:textColor="@color/white"
             android:textAllCaps="false"
-            android:padding="14dp"
+            android:drawablePadding="8dp"
             android:layout_marginBottom="12dp" />
 
         <Button
             android:id="@+id/btnCurrency"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/outlined_button"
             android:text="Currency Detection"
+            android:textColor="@color/white"
             android:textAllCaps="false"
-            android:padding="14dp"
             android:layout_marginBottom="12dp" />
 
         <Button
             android:id="@+id/btnReading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/outlined_button"
             android:text="Reading Mode"
+            android:textColor="@color/white"
             android:textAllCaps="false"
-            android:padding="14dp" />
+            android:layout_marginBottom="18dp" />
+
     </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- Assistance button at bottom -->
+    <Button
+        android:id="@+id/btnAssistance"
+        android:layout_width="190dp"
+        android:layout_height="48dp"
+        android:background="@drawable/assistance_button"
+        android:text="Assistance"
+        android:textColor="@color/bg_start"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="28dp"/>
 
-
+</androidx.constraintlayout.widget.ConstraintLayout>
